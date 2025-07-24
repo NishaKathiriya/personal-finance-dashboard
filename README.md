@@ -1,77 +1,29 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# 💰 Personal Finance Dashboard
 
-## Project info
+A modern, responsive Personal Finance Tracker App built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS** — designed to help users track expenses, set savings goals, and visualize financial trends.
 
-**URL**: https://lovable.dev/projects/27e9cb42-ee3b-4c0e-abc0-43cca2d8b96a
+---
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- 📊 **Dashboard Overview** – See total income, expenses, savings, and visual summaries
+- 💸 **Transaction Tracking** – Add, edit, and categorize expenses and income
+- 🎯 **Savings Goals** – Set goals and monitor your progress toward achieving them
+- 📅 **Monthly Trend Analysis** – Visual charts for monthly income vs expenses
+- 🔐 **Context-based State Management** – Efficient app state using React Context API
+- 🌐 **Responsive Design** – Optimized for all devices (mobile, tablet, desktop)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/27e9cb42-ee3b-4c0e-abc0-43cca2d8b96a) and start prompting.
+## 🛠️ Built With
 
-Changes made via Lovable will be committed automatically to this repo.
+- ⚛️ [React](https://reactjs.org/)
+- 🟦 [TypeScript](https://www.typescriptlang.org/)
+- ⚡ [Vite](https://vitejs.dev/)
+- 💨 [Tailwind CSS](https://tailwindcss.com/)
+- 🧠 [React Query](https://tanstack.com/query/latest)
+- 🧭 [React Router](https://reactrouter.com/)
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/27e9cb42-ee3b-4c0e-abc0-43cca2d8b96a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-=======
-# personal-finance-dashboard
->>>>>>> 33e430eda144ac7b2b072e611caf103ea9a08d45
