@@ -28,13 +28,13 @@ interface TransactionDialogProps {
 export function TransactionDialog({ open, onOpenChange, transactionId }: TransactionDialogProps) {
   const { transactions, addTransaction, updateTransaction } = useFinance();
   const { toast } = useToast();
-  
+
   const [formData, setFormData] = useState({
     amount: "",
     description: "",
     category: "",
     type: "expense" as "income" | "expense",
-    date: new Date().toISOString().split('T')[0],
+    date: new Date().toISOString().split('T')[0], // default to today
   });
 
   const editingTransaction = transactionId ? transactions.find(t => t.id === transactionId) : null;
@@ -62,7 +62,7 @@ export function TransactionDialog({ open, onOpenChange, transactionId }: Transac
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.amount || !formData.description || !formData.category) {
       toast({
         title: "Error",
@@ -72,12 +72,16 @@ export function TransactionDialog({ open, onOpenChange, transactionId }: Transac
       return;
     }
 
+    // ✅ Fix 1: Safely create a local date from input
+    const [year, month, day] = formData.date.split("-");
+    const localDate = new Date(Number(year), Number(month) - 1, Number(day));
+
     const transactionData = {
       amount: parseFloat(formData.amount),
       description: formData.description,
       category: formData.category,
       type: formData.type,
-      date: new Date(formData.date).toISOString(),
+      date: localDate.toISOString(), // safe for saving
     };
 
     if (isEditing && transactionId) {
@@ -175,6 +179,7 @@ export function TransactionDialog({ open, onOpenChange, transactionId }: Transac
             <Input
               id="date"
               type="date"
+              max={new Date().toISOString().split("T")[0]} // ✅ Fix 2: Disallow future dates
               value={formData.date}
               onChange={(e) => handleInputChange("date", e.target.value)}
             />
